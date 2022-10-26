@@ -6,16 +6,13 @@
 
 
 if ( getNotificationTextFromUrl() ) {
-	console.log( cleanText( getNotificationTextFromUrl() ) ); 
+	console.log( "jo", cleanText( getNotificationTextFromUrl() ) ); 
 }
 
 
 function getNotificationTextFromUrl() {
-	let parsedURL = window.location.href.split('?notification=');  
-	if (parsedURL.length === 1) {
-		return false; 
-	} 
-	let notificationContent = parsedURL[1].split('?')[0]; 
+	let urlParams = new URLSearchParams(window.location.search); 
+	let notificationContent = urlParams.get('notification');  
 	return notificationContent; 
 }
 

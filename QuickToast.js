@@ -32,7 +32,7 @@ class QuickToast {
 
     fillTemplate(id, txt) {
         let successColor = "#20a779"; 
-        return  `<div id="notif-${id}" style="position: fixed; z-index: 1; bottom: 1em; left: 1em; background-color: #fff; padding: .4em 1em; box-shadow: 1px 1px 4px rgba(0,0,0,.4); border-radius: 4px; border-left: solid ${successColor} 4px; color: ${successColor}; ">
+        return  `<div id="notif-${id}" style="position: fixed; z-index: 1; bottom: 1em; left: 1em; background-color: #fff; padding: .4em 1em; box-shadow: 1px 1px 4px rgba(0,0,0,.4); border-radius: 4px; border-left: solid ${successColor} 4px; color: ${successColor}; user-select: none; ">
                     ${txt}
                 </div>`; 
     }
