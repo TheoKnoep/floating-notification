@@ -9,7 +9,6 @@ if ( getNotificationTextFromUrl() ) {
 	console.log( cleanText( getNotificationTextFromUrl() ) ); 
 }
 
-window.location
 
 function getNotificationTextFromUrl() {
 	let parsedURL = window.location.href.split('?notification=');  
@@ -27,5 +26,7 @@ function cleanText(string) {
 	let ecute = agrave.replaceAll('%C3%A9', 'é'); 
 	return ecute; 
 }
+
+
 
 
